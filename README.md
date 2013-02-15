@@ -1,4 +1,4 @@
-# jQuery WallFlip Plugin v0.1 #
+# jQuery WallFlip Plugin v0.2 #
 
 
 **Include the dependencies**

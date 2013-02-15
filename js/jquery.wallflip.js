@@ -1,13 +1,22 @@
 /* 
-| Wallflip v0.1
+| jQuery.Wallflip v0.2
+| 
+| Copyright (c) 2013 João Ribeiro
 |
-| Some licence stuff...
+| Contribuitions
+| - Design and inspiration from the tutorial made by Martin Angelov (http://tutorialzine.com/2010/03/sponsor-wall-flip-jquery-css/)
+| - Built on top of flip plugin from Luca Manno (http://lab.smashup.it/flip/)
+| - Also a lot of credit to jQuery and jQuery UI Team
+|
+| Licenced under MIT Licence (See LICENCE file for more information)
  */
 
 ;(function($) {
 
 	/**** Global flag to keep track of fliped elements ****/
 	var currentFliped = [];
+	/**** Global flag to keep track of running animations (prevent multiple clicks) ****/
+	var animationRunning = [];
 
 	/**** Default Options ****/
 	var defaults = {
@@ -34,7 +43,6 @@
 		var mainDiv = this.element;
 		var config = this.config;
 		
-		/**** Hard coded test ****/
 		mainDiv.addClass("sponsorListHolder");	
 		
 		var item_config;
@@ -69,7 +77,7 @@
 				elem.data("flipped",false);
 				if(config.oneAtTime){currentFliped[mainDiv.attr("id")] = null;}
 			}
-			else{
+			else if(animationRunning[mainDiv.attr("id")] !== true){
 				/**** Revert flip other fliped elements before flip the new one ****/
 				if(currentFliped[mainDiv.attr("id")] != null && config.oneAtTime)
 				{
@@ -83,6 +91,10 @@
 					onBefore: function(){
 						/**** Fill the hidden back area ****/
 						elem.html(elem.siblings(".sponsorData").html());
+						animationRunning[mainDiv.attr("id")] = true;
+					},
+					onEnd: function(){
+						animationRunning[mainDiv.attr("id")] = false;
 					}
 				});
 				/**** Set the fliped flags ****/
