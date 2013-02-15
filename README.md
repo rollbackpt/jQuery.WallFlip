@@ -1,6 +1,9 @@
 # jQuery WallFlip Plugin v0.2 #
 
 
+[![facetracking](http://s7.postimage.org/vnnl72nob/wallflip.png)]
+
+
 **Include the dependencies**
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

@@ -1,3 +1,5 @@
 Todo v0.3:
 - Improve the item creation code
-- Add more control over the plugin layout like font-size and font-family to the description 
+- Add more control over the plugin layout like font-size and font-family to the description
+- Control number of elements per line (width)
+- Remove hover efect of element after he flips back 
