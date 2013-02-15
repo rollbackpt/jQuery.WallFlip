@@ -1,0 +1,4 @@
+Todo v0.2:
+- Add a flag to prevent multiple flips at same time or else it will override the currentFliped variable and one of the elements will never flip again. Meybe use the After flip event
+- Improve the item creation code
+- Add more control over the plugin layout like font-size and font-family to the description 
