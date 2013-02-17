@@ -77,7 +77,7 @@
 				elem.data("flipped",false);
 				if(config.oneAtTime){currentFliped[mainDiv.attr("id")] = null;}
 			}
-			else if(animationRunning[mainDiv.attr("id")] !== true){
+			else if(animationRunning[mainDiv.attr("id")] !== true || !config.oneAtTime){
 				/**** Revert flip other fliped elements before flip the new one ****/
 				if(currentFliped[mainDiv.attr("id")] != null && config.oneAtTime)
 				{
@@ -91,10 +91,10 @@
 					onBefore: function(){
 						/**** Fill the hidden back area ****/
 						elem.html(elem.siblings(".sponsorData").html());
-						animationRunning[mainDiv.attr("id")] = true;
+						if(config.oneAtTime){animationRunning[mainDiv.attr("id")] = true;}
 					},
 					onEnd: function(){
-						animationRunning[mainDiv.attr("id")] = false;
+						if(config.oneAtTime){animationRunning[mainDiv.attr("id")] = false;}
 					}
 				});
 				/**** Set the fliped flags ****/
