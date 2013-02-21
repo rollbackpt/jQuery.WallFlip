@@ -20,7 +20,9 @@
 
 	/**** Default Options ****/
 	var defaults = {
-		oneAtTime: true
+		oneAtTime: true,
+		fontSize: null,
+		fontFamily: null	
 	};
 	
 	var item_defaults = {
@@ -42,10 +44,13 @@
 	Wallflip.prototype.init = function() {
 		var mainDiv = this.element;
 		var config = this.config;
+		var item_config, unique_class;
 		
-		mainDiv.addClass("sponsorListHolder");	
+		mainDiv.addClass("sponsorListHolder");
 		
-		var item_config;
+		/**** Generate unique class name to each plugin ti allow different styling between plugins ****/
+		unique_class = "wallFlipData" + new Date().getTime();
+		
 		for (var x = 0,y = this.config.items.length; x < y; x++)
 		{
 			/**** Extend item_default option to prevent undefined options ****/
@@ -56,16 +61,18 @@
 					<img src='" + item_config.image +"' alt='" + item_config.description + "' /> \
 				</div> \
 				<div class='sponsorData'> \
-					<div class='sponsorDescription'> \
+					<div class='sponsorDescription " + unique_class + "'> \
 						" + item_config.description + " \
 					</div> \
-					<div class='sponsorURL'> \
+					<div class='sponsorURL " + unique_class + "'> \
 						<a href='" + item_config.link + "' target='_blank'>" + item_config.link_name + "</a> \
 					</div> \
 				</div> \
 			</div>");
-			
 		}
+		
+		if(config.fontSize !== null){$("." + unique_class).css({"font-size" : config.fontSize.replace(" ", "")});}
+		if(config.fontFamily !== null){$("." + unique_class).css({"font-family" : config.fontFamily});}
 		
 		mainDiv.find(".sponsorFlip").bind("click",function(){
 			var elem = $(this);
