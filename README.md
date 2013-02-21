@@ -47,10 +47,14 @@
 
 ## Options
 
-* oneAtTime 
+* **oneAtTime** 
    - true to only allow one element to be flipped at a time
    - false to allow any number of elements to be flipped at a time
-* items
+* **fontSize** 
+   - size of the font to the description and link (Ex: fontSize: "10px")
+* **fontFamily** 
+   - family of the font to the description and link (Ex: fontFamily: "Arial", fontFamily: "Comic Sans, Comic Sans MS, cursive")
+* **items**
    - image (Image url. Ex: images/myimage.jpg)
    - description 
    - link (Link url. Ex: http://www.google.pt)
