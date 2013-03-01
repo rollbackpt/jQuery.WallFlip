@@ -1,6 +1,6 @@
 Todo v0.3:
 - Improve the item creation code
-- Add more control over the plugin layout
-- Control number of elements per line (columns) and the width and heith of each element
-- Remove hover efect of element after he flips back 
-- Meybe some onmousehover flip effect
+- Add more control over the plug-in layout
+- Control number of elements per line (columns) and the width and height of each element
+- Remove hover effect of element after he flips back 
+- Maybe some onmousehover flip effect
