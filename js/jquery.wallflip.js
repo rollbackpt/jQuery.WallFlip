@@ -22,7 +22,8 @@
 	var defaults = {
 		oneAtTime: true,
 		fontSize: null,
-		fontFamily: null	
+		fontFamily: null,
+		fontStyle: null	
 	};
 	
 	var item_defaults = {
@@ -48,7 +49,7 @@
 		
 		mainDiv.addClass("sponsorListHolder");
 		
-		/**** Generate unique class name to each plugin ti allow different styling between plugins ****/
+		/**** Generate unique class name to each plugin to allow different styling between plugins ****/
 		unique_class = "wallFlipData" + new Date().getTime();
 		
 		for (var x = 0,y = this.config.items.length; x < y; x++)
@@ -73,6 +74,7 @@
 		
 		if(config.fontSize !== null){$("." + unique_class).css({"font-size" : config.fontSize.replace(" ", "")});}
 		if(config.fontFamily !== null){$("." + unique_class).css({"font-family" : config.fontFamily});}
+		if(config.fontStyle !== null){$("." + unique_class).css({"font-style" : config.fontStyle});}
 		
 		mainDiv.find(".sponsorFlip").bind("click",function(){
 			var elem = $(this);

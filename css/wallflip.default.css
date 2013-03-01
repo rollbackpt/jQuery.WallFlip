@@ -23,7 +23,8 @@
 	width:100%;
 	height:100%;
 	border:1px solid #ddd;	
-	background:url("../demo/img/bg.jpg") no-repeat center center #f9f9f9;
+	background:url("../demo/img/bg.jpg") no-repeat center center #f9f9f9 !important;
+	background-color: #f9f9f9 !important;
 }
 
 .sponsorFlip:hover{
