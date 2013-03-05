@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>jQuery.WallFlip by rollbackpt</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>jQuery.WallFlip</h1>
+          <h2>jQuery plugin to create a wall of images that flip on click to show some description about the image.</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/rollbackpt/jQuery.WallFlip/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/rollbackpt/jQuery.WallFlip/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/rollbackpt/jQuery.WallFlip" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>jQuery WallFlip Plugin v0.2</h1>
+
+<p><a href="https://github.com/rollbackpt/jQuery.WallFlip"><img src="http://s7.postimage.org/vnnl72nob/wallflip.png" alt="facetracking"></a></p>
+
+<p><strong>Include the dependencies</strong></p>
+
+<pre><code>&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p><strong>Include the library</strong></p>
+
+<pre><code>&lt;script src="jquery.flip.min.js"&gt;&lt;/script&gt;
+&lt;script src="jquery.wallflip.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p><strong>jQuery.WallFlip</strong></p>
+
+<div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"wallflip1"</span><span class="nt">&gt;&lt;/div&gt;</span>
+
+<span class="nt">&lt;script&gt;</span>
+    <span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s2">"#wallflip1"</span><span class="p">).</span><span class="nx">wallflip</span><span class="p">({</span>
+            <span class="nx">oneAtTime</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nx">items</span><span class="o">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nx">image</span><span class="o">:</span> <span class="s2">"img/items/img1.png"</span><span class="p">,</span>
+                    <span class="nx">description</span><span class="o">:</span> <span class="s2">"Check this site."</span><span class="p">,</span>
+                    <span class="nx">link</span><span class="o">:</span> <span class="s2">"http://site1.com"</span><span class="p">,</span>
+                    <span class="nx">link_name</span><span class="o">:</span> <span class="s2">"Site1"</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="nx">image</span><span class="o">:</span> <span class="s2">"img/items/img2.png"</span><span class="p">,</span>
+                    <span class="nx">description</span><span class="o">:</span> <span class="s2">"Check this site."</span><span class="p">,</span>
+                    <span class="nx">link</span><span class="o">:</span> <span class="s2">"http://site2.com"</span><span class="p">,</span>
+                    <span class="nx">link_name</span><span class="o">:</span> <span class="s2">"Site2"</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="nx">image</span><span class="o">:</span> <span class="s2">"img/items/img3.png"</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">});</span>
+    <span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+</pre></div>
+
+<h2>Options</h2>
+
+<ul>
+<li>
+<strong>oneAtTime</strong> 
+
+<ul>
+<li>true to only allow one element to be flipped at a time</li>
+<li>false to allow any number of elements to be flipped at a time</li>
+</ul>
+</li>
+<li>
+<strong>fontSize</strong> 
+
+<ul>
+<li>size of the font to the description and link (Ex: fontSize: "10px")</li>
+</ul>
+</li>
+<li>
+<strong>fontFamily</strong> 
+
+<ul>
+<li>family of the font to the description and link (Ex: fontFamily: "Arial", fontFamily: "Comic Sans, Comic Sans MS, cursive")</li>
+</ul>
+</li>
+<li>
+<strong>items</strong>
+
+<ul>
+<li>image (Image url. Ex: images/myimage.jpg)</li>
+<li>description </li>
+<li>link (Link url. Ex: <a href="http://www.google.pt">http://www.google.pt</a>)</li>
+<li>link_name (Name to be displayed by the anchor tag containing the link)</li>
+</ul>
+</li>
+</ul><h2>More Information</h2>
+
+<ul>
+<li>Email: <a href="mailto:joaopedro.ribeiro@sapo.pt">joaopedro.ribeiro@sapo.pt</a>
+</li>
+</ul>
+        </section>
+
+        <footer>
+          jQuery.WallFlip is maintained by <a href="https://github.com/rollbackpt">rollbackpt</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
