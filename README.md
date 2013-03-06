@@ -10,7 +10,8 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
 
 **Include the library**
-
+    
+    <link rel="stylesheet" type="text/css" href="wallflip.default.css" />
     <script src="jquery.flip.min.js"></script>
     <script src="jquery.wallflip.js"></script>
 
