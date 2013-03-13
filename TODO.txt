@@ -4,3 +4,4 @@ Todo v0.3:
 - Control number of elements per line (columns) and the width and height of each element
 - Remove hover effect of element after he flips back 
 - Maybe some onmousehover flip effect
+- Offer keyboard accessibility
