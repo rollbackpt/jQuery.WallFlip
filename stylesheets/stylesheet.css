@@ -47,10 +47,6 @@ table {
   border-spacing: 0;
 }
 
-a:focus {
-  outline: none;
-}
-
 /*******************************************************************************
 Theme Styles
 *******************************************************************************/
@@ -144,7 +140,7 @@ strong {
 }
 
 img {
- /* position: relative;
+  position: relative;
   margin: 0 auto;
   max-width: 739px;
   padding: 5px;
@@ -155,7 +151,7 @@ img {
   -webkit-box-shadow: 0 0 5px #ebebeb;
   -moz-box-shadow: 0 0 5px #ebebeb;
   -o-box-shadow: 0 0 5px #ebebeb;
-  -ms-box-shadow: 0 0 5px #ebebeb; */
+  -ms-box-shadow: 0 0 5px #ebebeb;
 }
 
 pre, code {
@@ -258,8 +254,8 @@ form {
 }
 
 img {
- /* width: 100%;
-  max-width: 100%; */
+  width: 100%;
+  max-width: 100%;
 }
 
 /*******************************************************************************
