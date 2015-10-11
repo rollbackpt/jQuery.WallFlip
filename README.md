@@ -61,5 +61,7 @@
    - link (Link url. Ex: http://www.google.pt)
    - link_name (Name to be displayed by the anchor tag containing the link)
 
-## More Information
-   - Email: joaopedro.ribeiro@sapo.pt
+## About the author
+   - Email: joaopedrocr@gmail.com
+   - Blog: http://joaoperibeiro.com
+   - Personal Page: http://joaopcribeiro.branded.me
